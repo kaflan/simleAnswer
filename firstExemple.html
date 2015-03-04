@@ -44,12 +44,13 @@
                     <div class="clearfix"></div>
                     <div class="col-xs-4">
                         <label for="input-@grid-float-breakpoint-max"> Ведите правильный ответ</label>
-                        <input id="answer" type="text" aria-describedby="help-block-@grid-float-breakpoint-max" value="" data-var="" class="form-control " onchange="answer(this.value)" />
+                        <input  id='question' type="text" aria-describedby="help-block-@grid-float-breakpoint-max" value="" data-var="" class="form-control "  /><span id="answer"></span>
                         
                         <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
                             
                             <p > Answer:</p>
                             <p id="bool"> </p>
+                            <p id="inccorect"></p>
                         </div>
                     </div>
                 </div>
@@ -57,10 +58,11 @@
             </div>
             <div role="tabpanel" class="tab-pane fade " id="profile" aria-labelledby="profile-tab">
                 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                    <button type="button" class="btn btn-default">Вычитание</button>
-                    <button type="button" class="btn btn-default">Умножение</button>
-                    <button type="button" class="btn btn-default">Вычетание</button>
-                    <button type="button" class="btn btn-default">Деление</button>
+                   <p><button type="button" class="btn btn-default" id="buttonGENER"> </button></p>
+                    <button type="button" class="btn btn-default" id='minus'>Вычитание</button>
+                    <button type="button" class="btn btn-default" id='umnogenie'>Умножение</button>
+                    <button type="button" class="btn btn-default" id='plus'>Вычетание</button>
+                    <button type="button" class="btn btn-default" id='divine'>Деление</button>
                 </div>
             </div>
 

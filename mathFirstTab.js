@@ -1,23 +1,28 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-		var correct = "correct";
-		var incorrect = "incorrect";
+ document.addEventListener("DOMContentLoaded", functionv(event) { 
+		var correct = "correct: ";
+		var incorrect = "incorrect: ";
 		var elemIdAnswer = document.getElementById('bool');
+        var answerIncorect = document.getElementById('inccorect');
 		var randAnswer;
-		function answer(val) {
+		var answer = function(){			
+  			var an = document.getElementById('question').value;
+  			function (an){
 		    //проверка 
-		    var count = 0;
+		    var countCorrect = 0;
+            var countIncorect = 0;
 		    for(var i = 0; i <= cont; i++){
-		    if (randAnswer === val) {
-		        elemIdAnswer.innerHTML = correct + count;
-
-		    } else {
-		        elemIdAnswer.innerHTML = incorrect + count;
-
-	    	}
+		    	if(randAnswer == an){
+		        elemIdAnswer.innerHTML = correct + countCorrect;
+		    }else{
+		        answerIncorect.innerHTML = incorrect + countIncorect;
+	    		 }
+			}
 		}
-	}
-
-
+	};
+		 
+	
+    //exp
+    
 	var generator = function(e) {
 		console.log('i am generator');
 		var elemId = document.getElementById('generator');
@@ -37,5 +42,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	    elemMyId.innerHTML = randQuestion;
 		//прием данных из инпута
 	};
+    
 	document.getElementById('generator').addEventListener("click", generator);
+    //document.getElementById('buttonGENER').addEventListener("click", buttonanswer);
+    document.getElementById("answer").addEventListener('keyup', answer);
 });
+ 
