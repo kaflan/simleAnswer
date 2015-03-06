@@ -4,9 +4,13 @@
      var randAnswer;
      var toGavno;
      //exp
+      var correctEl = document.getElementById('correct');
+      var incorrectEl = document.getElementById('incorrect');
      var kafka = 0;
      var gavno = 0;
-     var generator = function(e) {
+     correctEl.innerHTML = kafka;
+     incorrectEl.innerHTML = gavno;
+    	 var generator = function(e) {
          console.log('i am generator');
          var elemId = document.getElementById('generator');
          var elemMyId = document.getElementById('exam');
@@ -21,7 +25,6 @@
              }
 
          }
-
          //создаем рандомизатор 
          var randomZnack = Math.floor(Math.random() * expressions.length);
          //рандомизируем то что есть в проверке. 
@@ -31,7 +34,7 @@
          var randNum2 = Math.floor(Math.random() * 20) + 100;
          var randQuestion = randNum2 + numbo + randNum1;
          console.log(randQuestion);
-         randAnswer = eval(randQuestion);
+         randAnswer = Math.ceil(eval(randQuestion), -2);
          toGavno = randAnswer + "";
          console.log(toGavno);
          // добавляем на страничку наш пример(из попадания)
@@ -40,14 +43,11 @@
      };
      //проверка ввода     
      var answer = function() {
-         var an = document.getElementById('question').value;
-         var correctEl = document.getElementById('correct');
-         var incorrectEl = document.getElementById('incorrect');
-         console.log(an, "lala");
+       for (var i = 0; i <= kafka, gavno; i++) {  
+         var an = document.getElementById('question').value;     
          console.log(typeof(an));
          //проверка
-
-         for (var i = 0; i < kafka, gavno; i++) {
+         	console.log(an, "lala");
              if (an === toGavno) {
                  console.log("lala");
                  kafka += i;
