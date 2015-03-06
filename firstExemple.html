@@ -20,10 +20,8 @@
     <div class="bs-example bs-example-tabs container" role="tabpanel" data-example-id="togglable-tabs">
         <ul id="myTab" class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Проверка</a>
-
             </li>
             <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Установка</a>
-
             </li>
         </ul>
         <div id="myTabContent" class="tab-content">
@@ -36,38 +34,36 @@
                             </button>
                             <br/>
                         </p>
-
                         <p> Выражение:</p>
                         <p class="exemple obj-generator" id="exam"></p>
                     </div>
-
                     <div class="clearfix"></div>
                     <div class="col-xs-4">
                         <label for="input-@grid-float-breakpoint-max"> Ведите правильный ответ</label>
-                        <input  id='question' type="text" aria-describedby="help-block-@grid-float-breakpoint-max" value="" data-var="" class="form-control "  /><span id="answer"></span>
-                        
+                        <input id='question' name="text" type="text" aria-describedby="help-block-@grid-float-breakpoint-max" value="" data-var="" class="form-control " />
+                        <p>
+                        <button id="answwer"> Проверка</button>
+                        </p>
                         <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                            
-                            <p > Answer:</p>
-                            <p id="bool"> </p>
-                            <p id="inccorect"></p>
+                            <p> Answer</p>
+                            <p>Correct: </p>
+                            <p id="bool">0</p>
+                            <p>Incorrect: </p>
+                            <p id="inccorect">0</p>
                         </div>
                     </div>
                 </div>
-
             </div>
             <div role="tabpanel" class="tab-pane fade " id="profile" aria-labelledby="profile-tab">
                 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                   <p><button type="button" class="btn btn-default" id="buttonGENER"> </button></p>
-                    <button type="button" class="btn btn-default" id='minus'>Вычитание</button>
-                    <button type="button" class="btn btn-default" id='umnogenie'>Умножение</button>
-                    <button type="button" class="btn btn-default" id='plus'>Вычетание</button>
-                    <button type="button" class="btn btn-default" id='divine'>Деление</button>
+                    <form action="" id="settings">
+                        <input type="checkbox" name='expressions' value="-" />minus <br/>   
+                        <input type="checkbox" name='expressions' value="*" />umnogit<br/>
+                        <input type="checkbox" name='expressions' value="+" />plus<br/>
+                        <input type="checkbox" name='expressions' value="/" />divane<br/>
+                    </form>
                 </div>
             </div>
-
-
-
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
