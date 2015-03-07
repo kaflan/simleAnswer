@@ -44,18 +44,16 @@
      //проверка ввода     
      var answer = function() {
          var an = document.getElementById('question').value;     
-         console.log(typeof(an));
          //проверка
-         
-         	console.log(an, "lala");
+         	
              if (an === toGavno) {
              	
                  console.log("lala");
-                 kafka += i;
+                 kafka += 1;
                  correctEl.innerHTML = kafka;
              } else {
                  console.log('nuff said');
-                 gavno += i;
+                 gavno += 1;
                  incorrectEl.innerHTML = gavno;
              }
          
