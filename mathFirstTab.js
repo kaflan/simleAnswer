@@ -8,6 +8,7 @@
       var incorrectEl = document.getElementById('incorrect');
      var kafka = 0;
      var gavno = 0;
+     var i = 0;
      correctEl.innerHTML = kafka;
      incorrectEl.innerHTML = gavno;
     	 var generator = function(e) {
@@ -23,7 +24,6 @@
              } else {
                  alert('alert checkbox not check');
              }
-
          }
          //создаем рандомизатор 
          var randomZnack = Math.floor(Math.random() * expressions.length);
@@ -43,12 +43,13 @@
      };
      //проверка ввода     
      var answer = function() {
-       for (var i = 0; i <= kafka, gavno; i++) {  
          var an = document.getElementById('question').value;     
          console.log(typeof(an));
          //проверка
+         
          	console.log(an, "lala");
              if (an === toGavno) {
+             	
                  console.log("lala");
                  kafka += i;
                  correctEl.innerHTML = kafka;
@@ -57,7 +58,7 @@
                  gavno += i;
                  incorrectEl.innerHTML = gavno;
              }
-         }
+         
      }
      document.getElementById('generator').addEventListener("click", generator);
      document.getElementById('answer').addEventListener("click", answer);
